@@ -20,6 +20,10 @@ app.get('/api/whoami', function(req, res) {
   res.send(whoami)
 })
 
+app.get('/', function(req, res) {
+  res.redirect('/api/whoami')
+})
+
 app.listen(process.env.PORT || 8080, function(req, res) {
   console.log("Server is listening.")
 })
